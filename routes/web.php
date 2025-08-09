@@ -3,7 +3,7 @@
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\RoleController;
-use App\Http\Controllers\SubcategoryController;
+use App\Http\Controllers\SubCategoryController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -42,13 +42,13 @@ Route::put('/categorias/{category}', [CategoryController::class, 'update'])->mid
 Route::delete('/categorias/{category}', [CategoryController::class, 'destroy'])->middleware('can:admin.destroy')->name('categories.destroy');
 
 //Subcategorias
-Route::get('/subcategorias', [SubcategoryController::class, 'index'])->middleware('can:admin.index')->name('subcategories.index');
-Route::get('/subcategorias/crear', [SubcategoryController::class, 'create'])->middleware('can:admin.create')->name('subcategories.create');
-Route::post('/subcategorias', [SubcategoryController::class, 'store'])->middleware('can:admin.store')->name('subcategories.store');
-Route::get('/subcategorias/{subcategory}', [SubcategoryController::class, 'show'])->middleware('can:admin.show')->name('subcategories.show');
-Route::get('/subcategorias/{subcategory}/editar', [SubcategoryController::class, 'edit'])->middleware('can:admin.edit')->name('subcategories.edit');
-Route::put('/subcategorias/{subcategory}', [SubcategoryController::class, 'update'])->middleware('can:admin.update')->name('subcategories.update');
-Route::delete('/subcategorias/{subcategory}', [SubcategoryController::class, 'destroy'])->middleware('can:admin.destroy')->name('subcategories.destroy');
+Route::get('/subcategorias', [SubCategoryController::class, 'index'])->middleware('can:admin.index')->name('subcategories.index');
+Route::get('/subcategorias/crear', [SubCategoryController::class, 'create'])->middleware('can:admin.create')->name('subcategories.create');
+Route::post('/subcategorias', [SubCategoryController::class, 'store'])->middleware('can:admin.store')->name('subcategories.store');
+Route::get('/subcategorias/{subcategory}', [SubCategoryController::class, 'show'])->middleware('can:admin.show')->name('subcategories.show');
+Route::get('/subcategorias/{subcategory}/editar', [SubCategoryController::class, 'edit'])->middleware('can:admin.edit')->name('subcategories.edit');
+Route::put('/subcategorias/{subcategory}', [SubCategoryController::class, 'update'])->middleware('can:admin.update')->name('subcategories.update');
+Route::delete('/subcategorias/{subcategory}', [SubCategoryController::class, 'destroy'])->middleware('can:admin.destroy')->name('subcategories.destroy');
 
 //Productos
 Route::get('/productos', [ProductController::class, 'index'])->middleware('can:admin.index')->name('products.index');
