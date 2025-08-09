@@ -8,7 +8,7 @@ use App\Models\ProductSubcategory;
 use App\Models\Subcategory;
 use Illuminate\Http\Request;
 
-class SubcategoryController extends Controller
+class SubCategoryController extends Controller
 {
     /**
      * Muestra una lista de subcategorías de una categoría específica.
