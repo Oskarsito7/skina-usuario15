@@ -43,7 +43,7 @@ class SubcategoryController extends Controller
      * @param  \App\Models\Category  $category
      * @return \Illuminate\Http\RedirectResponse
      */
-    public function store(Request $request, Category $category)
+    public function store(Request $request)
     {
         $request->validate([
             'name' => 'required|string|max:255',
